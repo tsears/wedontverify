@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang='{{ site.language }}'>
+    <head>
+        <title>{{ site.title }}</title>
+
+        {% css main %}
+        {% css home %}
+        <link href="//fonts.googleapis.com/css?family=Raleway|Montserrat:400,800" rel="stylesheet" type="text/css" />
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0"/>
+        <meta name="apple-mobile-web-app-capable" content="yes"/>
+        <meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+    </head>
+    <body>
+        <header>
+          {% include header.html %}
+        </header>
+        <div id="content">
+          <h1 class="banner">We Don't Verify!</h1>
+          {% for post in site.posts %}
+            <article class="{% if forloop.first %}first{% elsif forloop.last %}last{% else %}middle{% endif %}">
+          		<div class="article-head">
+          			<h2 class="title">{{ post.title }}</h2>
+          			<p class="date">{{ post.date | date: "%b %d, %Y" }}</p>
+          		</div><!--/.article-head-->
+          		<div class="article-content">
+          		    {{ post.content }}
+          		</div><!--/.article-content-->
+          	</article>
+          	{% if forloop.last %}{% else %}<div class="separator"></div>{% endif %}
+          {% endfor %}
+        </div>
+
+        <footer>
+        {% include footer.html %}
+        </footer>
+    </body>
+</html>
