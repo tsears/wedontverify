@@ -5,11 +5,12 @@ header {
   background-size: cover;
   
   &.hero {
-    height: 60% !important;
+    height: 65% !important;
     color: #eee;
     text-align: center;
     flex-direction: column;
     justify-content: center;
+    overflow-y: hidden;
     
     h1 {
       display: block;
@@ -25,6 +26,7 @@ header {
     
     p.hardToSee {
       color: #111;
+      font-size: 50%;
     }
   }
       
