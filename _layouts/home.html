@@ -11,11 +11,12 @@
         <meta name="apple-mobile-web-app-status-bar-style" content="black"/>
     </head>
     <body>
-        <header>
-          {% include header.html %}
+        <header class="hero">
+          <h1 class="banner">We Don't Verify</h1>
+          
+          <p>Paying tribute to those sites who can't figure out how to verify email addresses</p>
         </header>
         <div id="content">
-          <h1 class="banner">We Don't Verify!</h1>
           {% for post in site.posts %}
             <article class="{% if forloop.first %}first{% elsif forloop.last %}last{% else %}middle{% endif %}">
           		<div class="article-head">

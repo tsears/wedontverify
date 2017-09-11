@@ -15,18 +15,10 @@ html, body {
 }
 
 body {
-  display: flex;
-  flex-direction: column;
   font-size: 12pt;
   font-family: 'Lato', sans-serif;
   color: $text;
   background-color: $paper;
-  
-  #content {
-    // layout only!
-    flex: 1 0 auto;
-  }
-
 }
 
 #content {
